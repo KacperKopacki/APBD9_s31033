@@ -68,7 +68,7 @@ public class DbService(IConfiguration config) : IDbService
             prescriptionCmd.Parameters.AddWithValue("@Date", request.Date);
             prescriptionCmd.Parameters.AddWithValue("@DueDate", request.DueDate);
             prescriptionCmd.Parameters.AddWithValue("@IdPatient", patientId);
-            prescriptionCmd.Parameters.AddWithValue("@IdDoctor", 1); // zakładamy ID lekarza
+            prescriptionCmd.Parameters.AddWithValue("@IdDoctor", 1); 
 
             var prescriptionId = Convert.ToInt32(await prescriptionCmd.ExecuteScalarAsync());
             
